@@ -7,7 +7,7 @@ function cygnusops_enqueue_scripts() {
   // Register Vue script
   wp_register_script(
     'vue_script',
-    'http://localhost:8080/app.js',
+    'http://localhost:3000/app.js',
     array(),
     false,
     true
