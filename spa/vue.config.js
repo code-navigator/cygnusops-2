@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   devServer: {
-    port: 3000  // Change port here
+    port: 3000 // Change port here
   },
   configureWebpack: { // Aliases for project paths
     resolve: {
@@ -20,5 +20,3 @@ module.exports = {
     }
   }
 }
-
-
