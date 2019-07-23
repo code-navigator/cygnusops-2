@@ -1,5 +1,5 @@
 <template>
-  <HelloWorld />
+  <h1>This the home page</h1>
 </template>
 
 <script>
@@ -10,14 +10,4 @@
       HelloWorld
     }
   }
-</script>
-ias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
-}
 </script>
