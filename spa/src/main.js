@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import '@Plugins/vuetify'
 import '@Plugins/axios'
-import App from '@Layouts/App.vue'
+import App from '@Layouts/app/index.vue'
 import router from '@Router/router.js'
 import store from '@Store/store'
 
