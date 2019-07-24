@@ -2,7 +2,8 @@ const path = require('path')
 
 module.exports = {
   devServer: {
-    port: 3000 // Change port here
+    port: 3000, // Change port here
+    disableHostCheck: true // Disables Webpack's invalid host header error
   },
   configureWebpack: { // Aliases for project paths
     resolve: {
