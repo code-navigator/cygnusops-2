@@ -1,5 +1,5 @@
-import Home from '@Pages/Home.vue'
-import About from '@Pages/About.vue'
+import Home from '@Pages/home/index.vue'
+import About from '@Pages/about/index.vue'
 
 const routes = [
   {
