@@ -1,17 +1,17 @@
-import api from '@Api/api'
+import api from '@Api/api';
 
 export default {
   name: 'About',
 
-  data() {
+  data () {
     return {
       text: '',
       revision: ''
-    }
+    };
   },
 
-  created: async function() {
-      const response = api.get('wp-json/wp/v2/pages/152');
-      console.log(await response.data);
+  created: async function () {
+    const response = await api.get('wp-json/wp/v2/pages/193');
+    console.log(response.data.content.rendered);
   }
-}
+};
