@@ -1,4 +1,4 @@
-import api from '@Api/api';
+import { mapActions, mapState } from 'vuex'
 
 export default {
   name: 'About',
@@ -10,8 +10,20 @@ export default {
     };
   },
 
-  created: async function () {
-    const response = await api.get('wp-json/wp/v2/pages/152');
-    console.log(response.data.content.rendered);
+  computed: {
+    ...mapState([
+      'procedure'
+    ])
+  },
+
+  created: function() {
+    console.log('created');
+    this.getProcedure();
+  },
+
+  methods: {
+    ...mapActions([
+      'getProcedure'
+    ])
   }
 };

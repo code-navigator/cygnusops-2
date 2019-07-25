@@ -1,3 +1,4 @@
-div
-  h1 This is the about page.
-  v-btn(color="primary" @click.native="click") Button
+v-container(fluid)
+  h1(v-html="procedure.title")
+  v-sheet(elevation="6")
+    div(v-html="procedure.content")
