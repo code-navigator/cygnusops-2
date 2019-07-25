@@ -11,7 +11,7 @@ export default {
   },
 
   created: async function () {
-    const response = await api.get('wp-json/wp/v2/pages/193');
+    const response = await api.get('wp-json/wp/v2/pages/152');
     console.log(response.data.content.rendered);
   }
 };
