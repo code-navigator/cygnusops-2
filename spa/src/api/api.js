@@ -7,7 +7,7 @@ export default {
     const path = new UrlClass(url, request);
     try {
       const response = await axios.get(path.pathWithQuery);
-      return response;
+      return response.data;
     } catch (error) {
       console.log('error', error);
     }

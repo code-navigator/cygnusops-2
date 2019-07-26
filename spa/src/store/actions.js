@@ -4,23 +4,21 @@ import api from '@Api/api'
 export default {
   // Retrieve data for current procedure
   async getProcedure({commit}) {
-    console.log('getProcedure');
-    const response = await api.get('wp-json/wp/v2/pages/152');
-    this.text = response.data.content.rendered;
+    const data = await api.get('wp-json/wp/v2/pages/152');
 
-    const procedure = new ProcedureClass();
-    procedure.title = response.data.title.rendered;
-    procedure.content = response.data.content.rendered;
-
-    commit('setProcedure', procedure);
+    commit(
+      'setProcedure',
+      new ProcedureClass({
+        title: data.title.rendered,
+        content: data.content.rendered,
+        revision: data.acf.revision,
+        author: data.acf.author,
+        approval: data.acf.approval,
+        restrictions: data.acf.restrictions,
+        scope: data.acf.scope,
+        references: data.acf.references
+      })
+    );
   }
 }
 
-// title = '',
-//     revision = '',
-//     author = '',
-//     approval = '',
-//     scope = '',
-//     restrictions = '',
-//     references = '',
-//     content = ''

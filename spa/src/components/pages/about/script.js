@@ -17,7 +17,6 @@ export default {
   },
 
   created: function() {
-    console.log('created');
     this.getProcedure();
   },
 
